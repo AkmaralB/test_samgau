@@ -1,0 +1,159 @@
+@include b(sectionNews) {
+    width: 100%;
+    @include e(container) {
+        @include flex-direction(column);
+        width: 77%;
+        max-width: 1110px;
+        margin: 0 auto 30px;
+    }
+    @include e(title) {
+        @include flex;
+        @include flex-direction(row);
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        align-items: flex-end;
+        @include m(big) {
+            margin: 0;
+            font-family: 'Source Sans Pro 700';
+            font-size: 22px;
+            letter-spacing: -2%;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        @include m(little) {
+            margin-bottom: 0;
+            letter-spacing: -2%;
+            color: #77767E;
+        }
+        @include m(button) {
+            display: flex;
+            justify-content: center;
+            width: 120px;
+            height: 40px;
+            margin-bottom: 0;
+            border: 2px solid #0066FF;
+            align-items: center;
+            font-family: 'Source Sans Pro 600';
+            text-decoration: none;
+            color: #0066FF;
+            outline: none;
+            &:hover {
+                color: #ffffff;
+                background-color: #0066FF;
+            }
+        }
+    }
+}
+
+@include b(news) {
+    display: grid;
+    grid-template-columns: repeat(4, 22.975%);
+    grid-template-rows: repeat(5, 17.84%);
+    grid-gap: 2.7%;
+    max-width: 1110px;
+    height: 680px;
+    color: #ffffff;
+    @include e(item1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        background-image: url('../img/1.png');
+    }
+    @include e(item2) {
+        grid-column: 2 / 4;
+        grid-row: 1 / 4;
+        background-image: url('../img/2.png');
+        &:hover {
+            background-color: #1555F9;
+            background-color: rgba(21, 85, 249, 0.8);
+            @include m(button) {
+                display: flex;
+            }
+        }
+
+    }
+    @include e(item3) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 6;
+        background-image: url('../img/3.png');
+        background-position-x: center;
+    }
+    @include e(item4) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 6;
+        background-image: url('../img/4.png');
+    }
+    @include e(item5) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 6;
+        background-image: url('../img/5.png');
+    }
+    @include e(item6) {
+        grid-column: 3 / 4;
+        grid-row: 4 / 6;
+        background-image: url('../img/6.png');
+    }
+
+    @include e(item) {
+        position: relative;
+        @include flex;
+        padding: 15px;
+        align-items: flex-end;
+        background-size: cover;
+        &:hover {
+            .news__item--button {
+                display: flex;
+            }
+            .news__item--cursor {
+                display: block;
+                background-color: #1555F9;
+            }
+            cursor: pointer;
+        }
+        div {
+            width: 100%;
+        }
+        @include m(button) {
+            z-index: 999;
+            display: none;
+            position: absolute;
+            margin: auto;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            justify-content: center;
+            width: 160px;
+            height: 40px;
+            border: 2px solid #ffffff;
+            align-items: center;
+            font-family: 'Source Sans Pro 600';
+            text-decoration: none;
+            color: #ffffff;
+        }
+        @include m(info) {
+            @include flex;
+            justify-content: space-between;
+            font-size: 13px;
+            letter-spacing: -0.02em;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        @include m(caption) {
+            margin: 0;
+            font-size: 18px;
+            font-family: 'Source Sans Pro 700';
+            letter-spacing: -0.02em;
+        }
+    }
+}
+.news__item--cursor {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: red;
+    opacity: 0.5;
+}

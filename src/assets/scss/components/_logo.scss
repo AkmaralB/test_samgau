@@ -1,0 +1,48 @@
+@include b(logo) {
+    @include flex;
+    @include flex-direction(row);
+    @include e(elem) {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: middle;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        @include m(elem1) {
+            width: 30px;
+            height: 100%;
+        }
+        @include m(elem2) {
+            padding-left: 10px;
+        }
+    }
+}
+.header__logo {
+    .logo__elem--elem1 {
+        color: #ffffff;
+        background-color: #0066FF;
+    }
+}
+.footer__logo {
+    .logo__elem--elem1 {
+        color: #0066FF;
+        background-color: #e6dddd;
+    }
+}
+.header__logo {
+    .logo:hover {
+        .logo__elem--elem2 {
+            background-image: linear-gradient(to right, #0066FF 30%, transparent 30%, transparent 100%, #0066FF 100%);
+        }
+    }
+}
+.footer__logo {
+    .logo:hover {
+        .logo__elem--elem2 {
+            background-image: linear-gradient(to right, #e6dddd 30%, transparent 30%, transparent 100%, #e6dddd 100%);
+        }
+    }
+}
