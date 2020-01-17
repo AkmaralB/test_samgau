@@ -48,3 +48,23 @@
         }
     }
 }
+
+@include respond-to(mobile) {
+    @include b(header) {
+        @include e(container) {
+            width: 90%;
+            height: 30px;
+            margin: 30px auto 30px;
+        }
+        @include e(menu) {
+            @include m(button) {
+                width: 56px;
+                height: calc(100% - 4px);
+                font-size: 12px;
+            }
+            @include m(button2) {
+                width: 85px;
+            }
+        }
+    }
+}

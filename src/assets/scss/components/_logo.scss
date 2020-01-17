@@ -46,3 +46,14 @@
         }
     }
 }
+
+@include respond-to(mobile) {
+    .header__logo {
+        .logo__elem--elem2 {
+            display: none;
+        }
+    }
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+}

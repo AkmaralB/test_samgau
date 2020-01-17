@@ -8,11 +8,14 @@
     }
     @include e(title) {
         @include flex;
-        @include flex-direction(row);
-        justify-content: space-between;
+        @include flex-direction(column);
         width: 100%;
         margin-bottom: 30px;
-        align-items: flex-end;
+        div {
+            @include flex;
+            @include flex-direction(row);
+            justify-content: space-between;
+            }
         @include m(big) {
             margin: 0;
             font-family: 'Source Sans Pro 700';
@@ -21,16 +24,11 @@
             text-transform: uppercase;
             color: #000000;
         }
-        @include m(little) {
-            margin-bottom: 0;
-            letter-spacing: -2%;
-            color: #77767E;
-        }
         @include m(button) {
             display: flex;
             justify-content: center;
-            width: 120px;
-            height: 40px;
+            width: 116px;
+            height: 36px;
             margin-bottom: 0;
             border: 2px solid #0066FF;
             align-items: center;
@@ -42,6 +40,11 @@
                 color: #ffffff;
                 background-color: #0066FF;
             }
+        }
+        @include m(little) {
+            margin: 0;
+            letter-spacing: -2%;
+            color: #77767E;
         }
     }
 }
@@ -70,7 +73,6 @@
                 display: flex;
             }
         }
-
     }
     @include e(item3) {
         grid-column: 4 / 5;
@@ -156,4 +158,39 @@
     margin: 0;
     background-color: red;
     opacity: 0.5;
+}
+
+@include respond-to(mobile) {
+    @include b(sectionNews) {
+        @include e(container) {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        @include e(title) {
+            margin-bottom: 15px;
+            div {
+                align-items: center;
+            }
+            @include m(big) {
+                font-size: 18px;
+            }
+            @include m(button) {
+                width: 92px;
+                height: 23px;
+                margin-top: 0;
+                font-size: 12px;
+            }
+        }
+    }
+    @include b(news) {
+        @include flex;
+        @include flex-direction(column);
+        height: auto;
+        justify-content: center;
+        @include e(item) {
+            height: 258px;
+            margin-bottom: 20px;
+            background-position: center center;
+        }
+    }    
 }
