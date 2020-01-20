@@ -1,0 +1,12 @@
+@include b(menu) {
+    display: block;
+    @include flex;
+    @include flex-direction(row);
+    @include e(elem) {
+        display: block;
+        padding-left: 40px;
+        text-decoration: none;
+        color: $white;
+        vertical-align: middle;
+    }
+}

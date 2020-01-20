@@ -1,0 +1,13 @@
+@include b(main) {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    @include e(title) {
+        margin-bottom: 25px;
+        @include title;
+        font-size: 50px;
+        line-height: 50%;
+        text-transform: uppercase;
+    }
+}

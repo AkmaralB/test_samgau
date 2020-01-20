@@ -4,25 +4,47 @@
     @include flex-align(left, top);
     min-width: 100%;
     width: 100%;
-    background: #ffffff;
+    background: #05101E;
     @include e(header) {
         flex: 0 0 auto;
         width: 100%;
-        margin: 0 auto;
+        max-width: 1110px;
+        margin: 40px auto 130px;
     }
-    @include e(sectionTable) {
+    @include e(main) {
         flex: 0 0 auto;
         width: 100%;
+        max-width: 1110px;
         margin: 0 auto;
     }
-    @include e(sectionNews) {
+    @include e(info) {
         flex: 0 0 auto;
         width: 100%;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    @include e(stat) {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    @include e(products) {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+    @include e(mission) {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 1110px;
         margin: 0 auto;
     }
     @include e(footer) {
         flex: 0 0 auto;
         width: 100%;
-        margin: 0 auto;
+        max-width: 1110px;
+        margin: 0 auto 60px;
     }
 }

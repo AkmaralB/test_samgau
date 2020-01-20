@@ -7,6 +7,7 @@
 @import 'util/flex';
 @import 'util/remcalc';
 @import 'util/breakpoints';
+@import 'util/mixins.scss';
 
 // Global
 // -----
@@ -18,6 +19,9 @@
 @import 'components/layout';
 @import 'components/header.scss';
 @import 'components/footer.scss';
-@import 'components/sectionTable.scss';
-@import 'components/sectionNews.scss';
-@import 'components/logo.scss';
+@import 'components/menu.scss';
+@import 'components/main.scss';
+@import 'components/info.scss';
+@import 'components/stat.scss';
+@import 'components/products.scss';
+@import 'components/mission.scss';

@@ -1,70 +1,21 @@
 @include b(header) {
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Source Sans Pro 700';
-    @include e(container) {
+    @include flex;
+    @include flex-direction(row);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Source Sans Pro 600';
+    @include e(logo) {
         @include flex;
         @include flex-direction(row);
-        width: 77%;
-        max-width: 1110px;
-        justify-content: space-between;
-        height: 40px;
-        margin: 50px auto 30px;
-    }
-    @include e(logo) {
-
+        font-size: 20px;
+        font-weight: bolder;
+        img {
+            @include icon;
+        }
     }
     @include e(menu) {
-        @include flex;
-        @include flex-direction(row);
-        font-family: 'Source Sans Pro 600';
-        a {
-            text-decoration: none;
-        }
-        @include m(button) {
-            display: flex;
-            justify-content: center;
-            width: 100px;
-            height: calc(100% - 4px);
-            margin: auto;
-            border: 2px solid transparent;
-            align-items: center;
-            text-decoration: none;
-            color: #222222;
-            outline: none;
-        }
-        @include m(button1) {
-            &:hover {
-                color: #0066FF;
-            }
-        }
-        @include m(button2) {
-            color: #0066FF;
-            border: 2px solid #0066FF;
-            &:hover {
-                color: #ffffff;
-                background-color: #0066FF;
-            }
-        }
+        flex-grow: 2;
     }
-}
-
-@include respond-to(mobile) {
-    @include b(header) {
-        @include e(container) {
-            width: 90%;
-            height: 30px;
-            margin: 30px auto 30px;
-        }
-        @include e(menu) {
-            @include m(button) {
-                width: 56px;
-                height: calc(100% - 4px);
-                font-size: 12px;
-            }
-            @include m(button2) {
-                width: 85px;
-            }
-        }
+    @include e(mail) {
     }
 }
